@@ -1,0 +1,17 @@
+
+config globals
+	option workgroup 'WORKGROUP'
+	option description 'Ksmbd on OpenWrt'
+	option allow_legacy_protocols '1'
+	option interface 'wan'
+
+config share
+	option name 'ssd'
+	option path '/mnt/sda'
+	option read_only 'no'
+	option guest_ok 'yes'
+	option users 'root'
+	option force_root '1'
+	option create_mask '0755'
+	option dir_mask '0755'
+

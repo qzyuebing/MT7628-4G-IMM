@@ -1,0 +1,31 @@
+
+config service 'pptpd'
+	option enabled '1'
+	option mppe '0'
+	option localip '192.168.88.80'
+	option remoteip '192.168.88.81-100'
+
+config users
+	option enabled '1'
+	option username '123'
+	option password '123'
+	option ipaddress '192.168.88.81'
+
+config users
+	option enabled '1'
+	option username 'x86'
+	option password '123'
+	option ipaddress '192.168.88.82'
+
+config users
+	option enabled '1'
+	option username 'mate30'
+	option password '123'
+	option ipaddress '192.168.88.83'
+
+config users
+	option enabled '1'
+	option username 'DS918'
+	option password '123'
+	option ipaddress '192.168.88.88'
+

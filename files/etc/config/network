@@ -1,0 +1,57 @@
+
+config interface 'loopback'
+	option device 'lo'
+	option proto 'static'
+	option ipaddr '127.0.0.1'
+	option netmask '255.0.0.0'
+
+config globals 'globals'
+	option packet_steering '1'
+
+config device
+	option name 'br-lan'
+	option type 'bridge'
+	list ports 'lan3'
+	list ports 'lan4'
+
+config interface 'lan'
+	option device 'br-lan'
+	option proto 'static'
+	option netmask '255.255.255.0'
+	option ip6assign '60'
+	option ipaddr '192.168.88.1'
+
+config interface 'wan'
+	option device 'wan'
+	option proto 'dhcp'
+
+config interface 'wan6'
+	option device 'wan'
+	option proto 'dhcpv6'
+
+config interface 'china_telecom'
+	option proto 'dhcp'
+	option device 'lan1'
+	option hostname '*'
+	option delegate '0'
+	option defaultroute '0'
+
+config device
+	option name 'lan1'
+
+config interface 'iptv_sdyx'
+	option proto 'static'
+	option device 'lan2'
+	option ipaddr '10.94.131.7'
+	option netmask '255.255.0.0'
+	option gateway '10.94.0.1'
+	option broadcast '10.94.255.255'
+	option delegate '0'
+	option defaultroute '0'
+	option force_link '0'
+
+config device
+	option name 'lan2'
+	option ipv6 '0'
+	option igmpversion '2'
+

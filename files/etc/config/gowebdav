@@ -1,0 +1,12 @@
+
+config gowebdav 'config'
+	option read_only '0'
+	option enable_https '0'
+	option listen_port '8086'
+	option mount_dir '/mnt/sda'
+	option public_access '1'
+	option enable_auth '1'
+	option username 'yuebing'
+	option password '696544'
+	option enabled '1'
+
