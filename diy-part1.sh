@@ -22,4 +22,4 @@ sed -i '$a src-git mmdvm https://github.com/qzyuebing/mmdvm-openwrt' feeds.conf.
 sed -i '$a src-git devtools https://github.com/lazywalker/devtools-feeds' feeds.conf.default
 sed -i '$a src-git modem_feeds https://github.com/FUjr/modem_feeds' feeds.conf.default
 sed -i '$a src-git modemband https://github.com/qzyuebing/luci-app-modemband' feeds.conf.default
-
+sed -i '$a src-git NueXini https://github.com/qzyuebing/NueXini_Packages' feeds.conf.default
