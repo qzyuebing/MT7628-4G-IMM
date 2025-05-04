@@ -33,6 +33,15 @@ config led
 
 config led
 	option name 'wifi'
+	option trigger 'netdev'
+	list mode 'link'
+	list mode 'tx'
+	list mode 'rx'
+	option dev 'wlan0-1'
+	option sysfs 'amber:status'
+
+config led
+	option name 'wifi bridging'
 	option sysfs 'TF:status'
 	option trigger 'netdev'
 	option dev 'wlan0'
