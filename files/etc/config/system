@@ -33,7 +33,7 @@ config led
 
 config led
 	option name 'wifi'
-	option sysfs '4G:status'
+	option sysfs 'TF:status'
 	option trigger 'netdev'
 	option dev 'wlan0'
 	list mode 'link'
