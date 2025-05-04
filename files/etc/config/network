@@ -33,5 +33,13 @@ config device
 config interface 'wan'
 	option proto 'dhcp'
 	option device 'eth1'
+	option metric '101'
+
+config interface 'trw_wwan'
+	option proto 'dhcp'
 	option metric '100'
+
+config interface 'trw_wwan6'
+	option device '@trw_wwan'
+	option proto 'dhcpv6'
 

@@ -29,14 +29,14 @@ config led
 	list mode 'link'
 	list mode 'tx'
 	list mode 'rx'
-	option sysfs 'red:status'
+	option sysfs '4G:status'
 
 config led
-	option sysfs 'amber:status'
+	option name 'wifi'
+	option sysfs '4G:status'
 	option trigger 'netdev'
 	option dev 'wlan0'
 	list mode 'link'
 	list mode 'tx'
 	list mode 'rx'
-	option name 'Wifi'
 
