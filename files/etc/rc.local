@@ -1,12 +1,5 @@
 # Put your custom commands here that should be executed once
 # the system init finished. By default this file does nothing.
-echo "0x19d2 0x0532" > /sys/bus/usb-serial/drivers/generic/new_id
-
-:start
- send "AT!RESET^m"
-EOF
-
-sleep 10
 gcom -d /dev/ttyUSB0 -s /proc/self/fd/0 << EOF
 opengt
  set com 115200n81
